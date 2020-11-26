@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>ADMIN REGISTRATION DETAILS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<form method="POST" class="post-form" action=""  enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>ADMIN REGISTRTAION  </h3>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">ENTER NAME:</label>
+    <div class="col-sm-4">
+    <input type="text" name="name">
+      </div>
+      </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">ENTER PASSWORD:</label>
+    <div class="col-sm-4">
+      <input type="password" name="password">
+      </div>
+      </div>
+      <div class="form-group row">
+    <label class="col-sm-2 col-form-label">ENTER EMAIL:</label>
+    <div class="col-sm-4">
+       <input type="email" name="email">
+      </div>
+      </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-success"><a href="/app/home/">home</button>
+  </div>
+  </div>
+    </div>
+</form>
+</body>
+</html>
